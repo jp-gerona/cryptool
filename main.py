@@ -8,4 +8,5 @@ def say_hello_py(name):
     print(message)
     return message
 
-eel.start("index.html", mode="default")
+if __name__ == "__main__":
+    eel.start("index.html", mode="default")
