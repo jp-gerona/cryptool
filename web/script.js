@@ -4,10 +4,6 @@ function sayHello() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("helloButton").addEventListener("click", sayHello);
-});
-
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -22,4 +18,23 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       });
     }
   });
+});
+
+// Navigation between sections
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", function () {
+    const targetId = this.innerText.toLowerCase();
+    const targetSection = document.querySelector(
+      `#screen-${targetId === "encrypt" ? 2 : targetId === "decrypt" ? 3 : 1}`
+    );
+    document.querySelectorAll("section").forEach((section) => {
+      section.style.display = "none";
+    });
+    targetSection.style.display = "block";
+  });
+});
+
+// Initialize the first screen
+document.querySelectorAll("section").forEach((section, index) => {
+  section.style.display = index === 0 ? "block" : "none";
 });

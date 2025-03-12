@@ -12,36 +12,60 @@
 </head>
 <body>
   <div class="retro-container old-crt-monitor">
-    <header>
-        <h1></h1>
-        <nav role="navigation">
-            <ul>
-                <li><a href="#screen-1">SCREEN 1</a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
-        <section id="screen-1">
-            <article>
-                <header>
-                    <h1 id="helloMessage">HELLO WORLD!</h1>
-                </header>
-                <div class="content">
-                    Lorem ipsum content type shi...
-                </div>
-                <figure>
-                    <img src="url_illustration" alt="alt text for illustration">
-                </figure>
-                <button id="helloButton">Change Header Text!</button>
-            </article>
-        </section>
+      <!-- Title screen -->
+      <section id="screen-1">
+        <header>
+            <h1>CRYPTOOL v.1.0.0</h1>
+        </header>
+        <div class="content">
+            ALL-IN-ONE Encryption and Decryption Tool!
+        </div>
+        <button>Encrypt</button>
+        <button>Decrypt</button>
+        <button>Exit</button>
+      </section>
+
+      <!-- Encrypt screen -->
+      <section id="screen-2">
+        <header>
+            <h1>ENCRYPT</h1>
+            <button>Back</button>
+        </header>
+        <div class="content">
+            <label for="encryptInput">Enter text to encrypt:</label>
+            <textarea id="encryptInput" rows="4" cols="50"></textarea>
+            <label for="encryptKey">Enter key:</label>
+            <input type="text" id="encryptKey">
+            <button id="encryptButton">Encrypt</button>
+            <label for="encryptOutput">Encrypted text:</label>
+            <textarea id="encryptOutput" rows="4" cols="50" readonly></textarea>
+        </div>
+      </section>
+
+      <!-- Decrypt screen -->
+      <section id="screen-3">
+        <header>
+            <h1>DECRYPT</h1>
+            <button>Back</button>
+        </header>
+        <div class="content">
+            <label for="decryptInput">Enter text to decrypt:</label>
+            <textarea id="decryptInput" rows="4" cols="50"></textarea>
+            <label for="decryptKey">Enter key:</label>
+            <input type="text" id="decryptKey">
+            <button id="decryptButton">Decrypt</button>
+            <label for="decryptOutput">Decrypted text:</label>
+            <textarea id="decryptOutput" rows="4" cols="50" readonly></textarea>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>lebron</p>
+        <p>&copy; Program by J.P. Gerona, J.R. Santos, L.G. Tiongco</p>
     </footer>
   </div>
 
-  <script src="/eel.js"></script>
+  <script type="text/javascript" src="/eel.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
