@@ -43,14 +43,16 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
           <label for="cipherSelectEncrypt">Select cipher:</label>
           <select id="cipherSelectEncrypt">
               <option value="caesar">Caesar</option>
-              <option value="mono">Monoalphabetic</option>
+              <option value="kamasutra">Kamasutra</option>
               <option value="vernam">Vernam</option>
               <option value="morse">Morse Code</option>
           </select>
           <label for="encryptInput">Enter text to encrypt:</label>
           <textarea id="encryptInput" rows="4" cols="50"></textarea>
-          <label for="encryptKey">Enter key:</label>
-          <input type="text" id="encryptKey">
+          <label for="encryptShift">Enter shift:</label>
+          <input type="number" id="encryptShift">
+          <label for="encryptKey" style="display: none;">Enter key:</label>
+          <input type="text" id="encryptKey" style="display: none;">
           <button id="encryptButton">Encrypt</button>
           <label for="encryptOutput">Encrypted text:</label>
           <textarea id="encryptOutput" rows="4" cols="50" readonly></textarea>
@@ -71,14 +73,16 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
           <label for="cipherSelectDecrypt">Select cipher:</label>
           <select id="cipherSelectDecrypt">
               <option value="caesar">Caesar</option>
-              <option value="mono">Monoalphabetic</option>
+              <option value="kamasutra">Kamasutra</option>
               <option value="vernam">Vernam</option>
               <option value="morse">Morse Code</option>
           </select>
           <label for="decryptInput">Enter text to decrypt:</label>
           <textarea id="decryptInput" rows="4" cols="50"></textarea>
-          <label for="decryptKey">Enter key:</label>
-          <input type="text" id="decryptKey">
+          <label for="decryptShift">Enter shift:</label>
+          <input type="number" id="decryptShift">
+          <label for="decryptKey" id="decryptKeyLabel" style="display: none;">Enter key:</label>
+          <input type="text" id="decryptKey" style="display: none;">
           <button id="decryptButton">Decrypt</button>
           <label for="decryptOutput">Decrypted text:</label>
           <textarea id="decryptOutput" rows="4" cols="50" readonly></textarea>

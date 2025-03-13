@@ -34,13 +34,24 @@ document
   .getElementById("cipherSelectEncrypt")
   .addEventListener("change", () => {
     const cipher = document.getElementById("cipherSelectEncrypt").value;
+    const shiftInput = document.getElementById("encryptShift");
+    const shiftLabel = document.querySelector('label[for="encryptShift"]');
     const keyInput = document.getElementById("encryptKey");
-    const keyLabel = document.getElementById("encryptKeyLabel");
+    const keyLabel = document.querySelector('label[for="encryptKey"]');
 
     if (cipher === "caesar") {
+      shiftInput.style.display = "block";
+      shiftLabel.style.display = "block";
+      keyInput.style.display = "none";
+      keyLabel.style.display = "none";
+    } else if (cipher === "vernam") {
       keyInput.style.display = "block";
       keyLabel.style.display = "block";
+      shiftInput.style.display = "none";
+      shiftLabel.style.display = "none";
     } else {
+      shiftInput.style.display = "none";
+      shiftLabel.style.display = "none";
       keyInput.style.display = "none";
       keyLabel.style.display = "none";
     }
@@ -50,13 +61,24 @@ document
   .getElementById("cipherSelectDecrypt")
   .addEventListener("change", () => {
     const cipher = document.getElementById("cipherSelectDecrypt").value;
+    const shiftInput = document.getElementById("decryptShift");
+    const shiftLabel = document.querySelector('label[for="decryptShift"]');
     const keyInput = document.getElementById("decryptKey");
-    const keyLabel = document.getElementById("decryptKeyLabel");
+    const keyLabel = document.querySelector('label[for="decryptKey"]');
 
     if (cipher === "caesar") {
+      shiftInput.style.display = "block";
+      shiftLabel.style.display = "block";
+      keyInput.style.display = "none";
+      keyLabel.style.display = "none";
+    } else if (cipher === "vernam") {
       keyInput.style.display = "block";
       keyLabel.style.display = "block";
+      shiftInput.style.display = "none";
+      shiftLabel.style.display = "none";
     } else {
+      shiftInput.style.display = "none";
+      shiftLabel.style.display = "none";
       keyInput.style.display = "none";
       keyLabel.style.display = "none";
     }

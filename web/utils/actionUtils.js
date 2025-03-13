@@ -15,7 +15,8 @@ function saveTextAsFile(text, filename) {
 }
 
 // Event listeners for copy and save buttons
-document.getElementById("copyEncryptButton").addEventListener("click", () => {
+document.getElementById("copyEncryptButton").addEventListener("click", (e) => {
+  e.preventDefault();
   const text = document.getElementById("encryptOutput").value;
   copyText(text);
 });
@@ -25,7 +26,8 @@ document.getElementById("saveEncryptButton").addEventListener("click", () => {
   saveTextAsFile(text, "encrypted.txt");
 });
 
-document.getElementById("copyDecryptButton").addEventListener("click", () => {
+document.getElementById("copyDecryptButton").addEventListener("click", (e) => {
+  e.preventDefault();
   const text = document.getElementById("decryptOutput").value;
   copyText(text);
 });
