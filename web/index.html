@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div class="retro-container old-crt-monitor">
@@ -31,7 +31,6 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
           <button>Decrypt</button>
           <button>Exit</button>
         </div>
-
       </section>
 
       <!-- Encrypt screen -->
@@ -40,15 +39,26 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
             <h1>ENCRYPT</h1>
             <button>Go Back</button>
         </header>
-        <div class="content">
-            <label for="encryptInput">Enter text to encrypt:</label>
-            <textarea id="encryptInput" rows="4" cols="50"></textarea>
-            <label for="encryptKey">Enter key:</label>
-            <input type="text" id="encryptKey">
-            <button id="encryptButton">Encrypt</button>
-            <label for="encryptOutput">Encrypted text:</label>
-            <textarea id="encryptOutput" rows="4" cols="50" readonly></textarea>
-        </div>
+        <form class="content">
+          <label for="cipherSelectEncrypt">Select cipher:</label>
+          <select id="cipherSelectEncrypt">
+              <option value="caesar">Caesar</option>
+              <option value="mono">Monoalphabetic</option>
+              <option value="vernam">Vernam</option>
+              <option value="morse">Morse Code</option>
+          </select>
+          <label for="encryptInput">Enter text to encrypt:</label>
+          <textarea id="encryptInput" rows="4" cols="50"></textarea>
+          <label for="encryptKey">Enter key:</label>
+          <input type="text" id="encryptKey">
+          <button id="encryptButton">Encrypt</button>
+          <label for="encryptOutput">Encrypted text:</label>
+          <textarea id="encryptOutput" rows="4" cols="50" readonly></textarea>
+          <div>
+            <button id="copyEncryptButton">Copy as Plaintext</button>
+            <button id="saveEncryptButton">Save as Text File</button>
+          </div>
+        </form>
       </section>
 
       <!-- Decrypt screen -->
@@ -57,15 +67,26 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
             <h1>DECRYPT</h1>
             <button>Go Back</button>
         </header>
-        <div class="content">
-            <label for="decryptInput">Enter text to decrypt:</label>
-            <textarea id="decryptInput" rows="4" cols="50"></textarea>
-            <label for="decryptKey">Enter key:</label>
-            <input type="text" id="decryptKey">
-            <button id="decryptButton">Decrypt</button>
-            <label for="decryptOutput">Decrypted text:</label>
-            <textarea id="decryptOutput" rows="4" cols="50" readonly></textarea>
-        </div>
+        <form class="content">
+          <label for="cipherSelectDecrypt">Select cipher:</label>
+          <select id="cipherSelectDecrypt">
+              <option value="caesar">Caesar</option>
+              <option value="mono">Monoalphabetic</option>
+              <option value="vernam">Vernam</option>
+              <option value="morse">Morse Code</option>
+          </select>
+          <label for="decryptInput">Enter text to decrypt:</label>
+          <textarea id="decryptInput" rows="4" cols="50"></textarea>
+          <label for="decryptKey">Enter key:</label>
+          <input type="text" id="decryptKey">
+          <button id="decryptButton">Decrypt</button>
+          <label for="decryptOutput">Decrypted text:</label>
+          <textarea id="decryptOutput" rows="4" cols="50" readonly></textarea>
+          <div>
+            <button id="copyDecryptButton">Copy as Plaintext</button>
+            <button id="saveDecryptButton">Save as Text File</button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>
@@ -74,6 +95,8 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
   </div>
 
   <script type="text/javascript" src="/eel.js"></script>
-  <script src="script.js"></script>
+  <script src="./utils/actionUtils.js"></script>
+  <script src="./utils/viewUtils.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
