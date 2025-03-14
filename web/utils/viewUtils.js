@@ -29,6 +29,12 @@ document.querySelectorAll("button").forEach((button) => {
   }
 });
 
+// Exit button event listener
+document.getElementById("exitButton").addEventListener("click", () => {
+  eel.close_application();
+  window.close();
+});
+
 // Hide/show key input based on selected cipher
 document
   .getElementById("cipherSelectEncrypt")

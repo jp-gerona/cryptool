@@ -1,4 +1,5 @@
 import eel
+import sys
 from ciphers import *
 
 eel.init("../web")
@@ -19,5 +20,9 @@ def exposed_vernam_cipher(text, key, mode):
 def exposed_morse_cipher(text, mode):
     return morse_cipher(text, mode)
 
+@eel.expose
+def close_application():
+    sys.exit(0)
+
 if __name__ == "__main__":
-    eel.start("index.html", mode="default")
+    eel.start("index.html", mode="default", geometry={"size": (1000, 800), "position": (100, 100)})

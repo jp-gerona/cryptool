@@ -2,14 +2,6 @@
 
 This project serves as our IT129 requirement.
 
-## Todo:
-
-- Style remaining components.
-- Fix: Revise UI/UX for encrypt and decrypt screens.
-- Bug: Save/Copy actions redirects user back to title screen.
-- Feature: Popovers for visual cues that show success/error.
-- Feature: Build as an independent browser app w/ dimensions.
-
 ## Tech Stack
 
 <div align="center">
@@ -35,8 +27,6 @@ This project serves as our IT129 requirement.
 │   ├── utils/
 │   │   ├── actionUtils.js
 │   │   ├── viewUtils.js
-├── .gitignore
-├── README.md
 ```
 
 Built with Javascript as frontend and Python as backend.
