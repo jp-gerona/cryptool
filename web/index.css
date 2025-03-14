@@ -89,6 +89,7 @@ input:focus {
 }
 
 div.retro-container {
+  position: relative;
   width: 90vw;
   height: 90vh;
   display: grid;
@@ -168,9 +169,9 @@ div.retro-container {
 
 .popover {
   font-size: clamp(16px, 2vw, 20px);
-  position: fixed;
-  top: 2rem;
-  right: 3rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
   background-color: transparent;
   border: 2px solid var(--success);
   color: var(--success);

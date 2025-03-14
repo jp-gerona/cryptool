@@ -1,8 +1,10 @@
 import eel
+import os
 import sys
 from ciphers import *
 
-eel.init("../web")
+dirname = os.path.dirname(__file__)
+eel.init(os.path.join(dirname, "web/"))
 
 @eel.expose
 def exposed_caesar_cipher(text, shift, mode):
@@ -25,4 +27,4 @@ def close_application():
     sys.exit(0)
 
 if __name__ == "__main__":
-    eel.start("index.html", mode="default", geometry={"size": (1000, 800), "position": (100, 100)})
+    eel.start("index.html", mode="chrome", geometry={"size": (1200, 800), "position": (100, 100)})

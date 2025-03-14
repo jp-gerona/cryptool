@@ -13,6 +13,7 @@
 </head>
 <body>
   <div class="retro-container old-crt-monitor">
+    <div id="popover" class="popover">Operation successful!</div>
     <main>
       <!-- Title screen -->
       <section id="screen-1">
@@ -35,39 +36,39 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
       </section>
 
       <!-- Encrypt screen -->
-<section id="screen-2">
-  <header>
-    <h1>ENCRYPT</h1>
-    <button>Go Back</button>
-  </header>
-  <form class="content">
-    <div>
-      <label for="encryptInput">Enter text to encrypt:</label>
-      <textarea id="encryptInput" rows="8" cols="50"></textarea>
-      <label for="cipherSelectEncrypt">Select cipher:</label>
-      <select id="cipherSelectEncrypt">
-        <option value="caesar">Caesar</option>
-        <option value="kamasutra">Kamasutra</option>
-        <option value="vernam">Vernam</option>
-        <option value="morse">Morse Code</option>
-      </select>
-      <label for="encryptShift">Enter shift:</label>
-      <input type="number" id="encryptShift">
-      <label for="encryptKey" style="display: none;">Enter key:</label>
-      <input type="text" id="encryptKey" style="display: none;">
-      <button id="encryptButton">Encrypt</button>
-    </div>
-    <div>
-      <label for="encryptOutput">Encrypted text:</label>
-      <textarea id="encryptOutput" rows="8" cols="50" readonly></textarea>
-      <label for="actions">Actions</label>
-      <div class="actions">
-        <a id="copyEncryptButton">Copy as Plaintext</a>
-        <a id="saveEncryptButton">Save as Text File</a>
-      </div>
-    </div>
-  </form>
-</section>
+      <section id="screen-2">
+        <header>
+          <h1>ENCRYPT</h1>
+          <button>Go Back</button>
+        </header>
+        <form class="content">
+          <div>
+            <label for="encryptInput">Enter text to encrypt:</label>
+            <textarea id="encryptInput" rows="8" cols="50"></textarea>
+            <label for="cipherSelectEncrypt">Select cipher:</label>
+            <select id="cipherSelectEncrypt">
+              <option value="caesar">Caesar</option>
+              <option value="kamasutra">Kamasutra</option>
+              <option value="vernam">Vernam</option>
+              <option value="morse">Morse Code</option>
+            </select>
+            <label for="encryptShift">Enter shift:</label>
+            <input type="number" id="encryptShift">
+            <label for="encryptKey" style="display: none;">Enter key:</label>
+            <input type="text" id="encryptKey" style="display: none;">
+            <button id="encryptButton">Encrypt</button>
+          </div>
+          <div>
+            <label for="encryptOutput">Encrypted text:</label>
+            <textarea id="encryptOutput" rows="8" cols="50" readonly></textarea>
+            <label for="actions">Actions</label>
+            <div class="actions">
+              <a id="copyEncryptButton">Copy as Plaintext</a>
+              <a id="saveEncryptButton">Save as Text File</a>
+            </div>
+          </div>
+        </form>
+      </section>
 
       <!-- Decrypt screen -->
       <section id="screen-3">
@@ -103,8 +104,6 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
       <small>&copy; Program by J.P. Gerona, J.R. Santos, L.G. Tiongco</small>
     </footer>
   </div>
-
-  <div id="popover" class="popover">Operation successful!</div>
 
   <script type="text/javascript" src="/eel.js"></script>
   <script src="./utils/actionUtils.js"></script>
