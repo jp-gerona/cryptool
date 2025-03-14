@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cryptool</title>
 
+  <link rel="icon" href="public/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -41,6 +42,8 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
   </header>
   <form class="content">
     <div>
+      <label for="encryptInput">Enter text to encrypt:</label>
+      <textarea id="encryptInput" rows="8" cols="50"></textarea>
       <label for="cipherSelectEncrypt">Select cipher:</label>
       <select id="cipherSelectEncrypt">
         <option value="caesar">Caesar</option>
@@ -53,16 +56,15 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
       <label for="encryptKey" style="display: none;">Enter key:</label>
       <input type="text" id="encryptKey" style="display: none;">
       <button id="encryptButton">Encrypt</button>
-      <div class="actions">
-        <button id="copyEncryptButton">Copy as Plaintext</button>
-        <button id="saveEncryptButton">Save as Text File</button>
-      </div>
     </div>
     <div>
-      <label for="encryptInput">Enter text to encrypt:</label>
-      <textarea id="encryptInput" rows="4" cols="50"></textarea>
       <label for="encryptOutput">Encrypted text:</label>
-      <textarea id="encryptOutput" rows="4" cols="50" readonly></textarea>
+      <textarea id="encryptOutput" rows="8" cols="50" readonly></textarea>
+      <label for="actions">Actions</label>
+      <div class="actions">
+        <a id="copyEncryptButton">Copy as Plaintext</a>
+        <a id="saveEncryptButton">Save as Text File</a>
+      </div>
     </div>
   </form>
 </section>
@@ -75,6 +77,8 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
         </header>
         <form class="content">
           <div>
+            <label for="decryptInput">Enter text to decrypt:</label>
+            <textarea id="decryptInput" rows="8" cols="50"></textarea>
             <label for="cipherSelectDecrypt">Select cipher:</label>
             <select id="cipherSelectDecrypt">
               <option value="caesar">Caesar</option>
@@ -87,16 +91,10 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
             <label for="decryptKey" id="decryptKeyLabel" style="display: none;">Enter key:</label>
             <input type="text" id="decryptKey" style="display: none;">
             <button id="decryptButton">Decrypt</button>
-            <div class="actions">
-              <button id="copyDecryptButton">Copy as Plaintext</button>
-              <button id="saveDecryptButton">Upload Text File</button>
-            </div>
           </div>
           <div>
-            <label for="decryptInput">Enter text to decrypt:</label>
-            <textarea id="decryptInput" rows="4" cols="50"></textarea>
             <label for="decryptOutput">Decrypted text:</label>
-            <textarea id="decryptOutput" rows="4" cols="50" readonly></textarea>
+            <textarea id="decryptOutput" rows="8" cols="50" readonly></textarea>
           </div>
         </form>
       </section>
@@ -105,6 +103,8 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
       <small>&copy; Program by J.P. Gerona, J.R. Santos, L.G. Tiongco</small>
     </footer>
   </div>
+
+  <div id="popover" class="popover">Operation successful!</div>
 
   <script type="text/javascript" src="/eel.js"></script>
   <script src="./utils/actionUtils.js"></script>

@@ -3,7 +3,8 @@
   font-weight: 400;
   --primary-color: #ffd52c;
   --secondary-color: #ff5c00;
-  --tertiary-color: #c72d04;
+  --success: #00ff00;
+  --error: #c72d04;
   --background-color: #111;
   scrollbar-color: var(--primary-color) var(--secondary-color);
   font-size: clamp(16px, 2vw, 28px);
@@ -44,7 +45,8 @@ section {
   margin: 1rem 0;
 }
 
-button {
+button,
+a {
   font-family: inherit;
   font-weight: inherit;
   font-size: clamp(16px, 2vw, 20px);
@@ -56,12 +58,14 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:hover,
+a:hover {
   background-color: var(--primary-color);
   color: var(--background-color);
 }
 
-button:active {
+button:active,
+a:active {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
@@ -152,6 +156,47 @@ div.retro-container {
   gap: 0.5rem;
 }
 
-.actions button {
-  flex-grow: 1; /* Allow buttons to grow and fill the available space */
+.actions button,
+.actions a {
+  flex-grow: 1;
+}
+
+#encryptOutput,
+#decryptOutput {
+  border-style: dashed;
+}
+
+.popover {
+  font-size: clamp(16px, 2vw, 20px);
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  background-color: transparent;
+  border: 2px solid var(--success);
+  color: var(--success);
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popover.show {
+  opacity: 1;
+}
+
+#encryptButton,
+#decryptButton {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+#encryptButton:hover,
+#decryptButton:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+#encryptButton:active,
+#decryptButton:active {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
