@@ -34,34 +34,38 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
       </section>
 
       <!-- Encrypt screen -->
-      <section id="screen-2">
-        <header>
-            <h1>ENCRYPT</h1>
-            <button>Go Back</button>
-        </header>
-        <form class="content">
-          <label for="cipherSelectEncrypt">Select cipher:</label>
-          <select id="cipherSelectEncrypt">
-              <option value="caesar">Caesar</option>
-              <option value="kamasutra">Kamasutra</option>
-              <option value="vernam">Vernam</option>
-              <option value="morse">Morse Code</option>
-          </select>
-          <label for="encryptInput">Enter text to encrypt:</label>
-          <textarea id="encryptInput" rows="4" cols="50"></textarea>
-          <label for="encryptShift">Enter shift:</label>
-          <input type="number" id="encryptShift">
-          <label for="encryptKey" style="display: none;">Enter key:</label>
-          <input type="text" id="encryptKey" style="display: none;">
-          <button id="encryptButton">Encrypt</button>
-          <label for="encryptOutput">Encrypted text:</label>
-          <textarea id="encryptOutput" rows="4" cols="50" readonly></textarea>
-          <div>
-            <button id="copyEncryptButton">Copy as Plaintext</button>
-            <button id="saveEncryptButton">Save as Text File</button>
-          </div>
-        </form>
-      </section>
+<section id="screen-2">
+  <header>
+    <h1>ENCRYPT</h1>
+    <button>Go Back</button>
+  </header>
+  <form class="content">
+    <div>
+      <label for="cipherSelectEncrypt">Select cipher:</label>
+      <select id="cipherSelectEncrypt">
+        <option value="caesar">Caesar</option>
+        <option value="kamasutra">Kamasutra</option>
+        <option value="vernam">Vernam</option>
+        <option value="morse">Morse Code</option>
+      </select>
+      <label for="encryptShift">Enter shift:</label>
+      <input type="number" id="encryptShift">
+      <label for="encryptKey" style="display: none;">Enter key:</label>
+      <input type="text" id="encryptKey" style="display: none;">
+      <button id="encryptButton">Encrypt</button>
+      <div class="actions">
+        <button id="copyEncryptButton">Copy as Plaintext</button>
+        <button id="saveEncryptButton">Save as Text File</button>
+      </div>
+    </div>
+    <div>
+      <label for="encryptInput">Enter text to encrypt:</label>
+      <textarea id="encryptInput" rows="4" cols="50"></textarea>
+      <label for="encryptOutput">Encrypted text:</label>
+      <textarea id="encryptOutput" rows="4" cols="50" readonly></textarea>
+    </div>
+  </form>
+</section>
 
       <!-- Decrypt screen -->
       <section id="screen-3">
@@ -70,25 +74,29 @@ _  /    __  ___/_  / / /__  __ \  __/  __ \  __ \_  /
             <button>Go Back</button>
         </header>
         <form class="content">
-          <label for="cipherSelectDecrypt">Select cipher:</label>
-          <select id="cipherSelectDecrypt">
+          <div>
+            <label for="cipherSelectDecrypt">Select cipher:</label>
+            <select id="cipherSelectDecrypt">
               <option value="caesar">Caesar</option>
               <option value="kamasutra">Kamasutra</option>
               <option value="vernam">Vernam</option>
               <option value="morse">Morse Code</option>
-          </select>
-          <label for="decryptInput">Enter text to decrypt:</label>
-          <textarea id="decryptInput" rows="4" cols="50"></textarea>
-          <label for="decryptShift">Enter shift:</label>
-          <input type="number" id="decryptShift">
-          <label for="decryptKey" id="decryptKeyLabel" style="display: none;">Enter key:</label>
-          <input type="text" id="decryptKey" style="display: none;">
-          <button id="decryptButton">Decrypt</button>
-          <label for="decryptOutput">Decrypted text:</label>
-          <textarea id="decryptOutput" rows="4" cols="50" readonly></textarea>
+            </select>
+            <label for="decryptShift">Enter shift:</label>
+            <input type="number" id="decryptShift">
+            <label for="decryptKey" id="decryptKeyLabel" style="display: none;">Enter key:</label>
+            <input type="text" id="decryptKey" style="display: none;">
+            <button id="decryptButton">Decrypt</button>
+            <div class="actions">
+              <button id="copyDecryptButton">Copy as Plaintext</button>
+              <button id="saveDecryptButton">Upload Text File</button>
+            </div>
+          </div>
           <div>
-            <button id="copyDecryptButton">Copy as Plaintext</button>
-            <button id="saveDecryptButton">Save as Text File</button>
+            <label for="decryptInput">Enter text to decrypt:</label>
+            <textarea id="decryptInput" rows="4" cols="50"></textarea>
+            <label for="decryptOutput">Decrypted text:</label>
+            <textarea id="decryptOutput" rows="4" cols="50" readonly></textarea>
           </div>
         </form>
       </section>
