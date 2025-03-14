@@ -2,6 +2,12 @@
 
 This project serves as our IT129 requirement.
 
+<div align="center">
+
+![Cryptool Screenshot](./screenshot.png)
+
+</div>
+
 ## Tech Stack
 
 <div align="center">
